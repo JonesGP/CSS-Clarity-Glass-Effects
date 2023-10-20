@@ -1,0 +1,60 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  height: 100vh;
+  width: 100vw;
+  background: #161616;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+body .circle {
+  position: absolute;
+  height: 400px;
+  width: 400px;
+  border-radius: 50%;
+  background: linear-gradient(red, orange);
+  animation: move-ball 10s ease-in-out infinite;
+}
+body .glass {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+body .glass .layer {
+  width: 40px;
+  height: 100vh;
+  margin: 1px;
+  box-shadow: 0 5px 25px rgba(0, 0, 0, 0.25);
+  backdrop-filter: blur(30px);
+}
+body .glass .layer:nth-child(4n+1) {
+  backdrop-filter: blur(20px);
+}
+body .glass .layer:nth-child(4n+2) {
+  backdrop-filter: blur(50px);
+}
+body .glass .layer:nth-child(4n+3) {
+  backdrop-filter: blur(30px);
+}
+body .glass .layer:nth-child(4n+4) {
+  backdrop-filter: blur(70px);
+}
+body .glass .layer:nth-child(4n+5) {
+  backdrop-filter: blur(10px);
+}
+@keyframes move-ball {
+  0%, 100% {
+    transform: translateX(-700px);
+  }
+  50% {
+    transform: translateX(700px);
+  }
+}
+
+/*# sourceMappingURL=style.css.map */
